@@ -16,48 +16,6 @@ Everything is optimized to be small, including the Makefile's. Therefore, the us
 - Start the server with "python server.py". It will print the server IOR to be used by the client.
 - Start the client with "python client.py <IOR>".
 
-## C++
-- Install omniORB.
-- Go into the ./cxx subdirectory.
-- (Optional) Re-generate stubs and skeletons with "omniorb -bcxx ../echo.idl".
-- Call "make" to build client and server.
-- Start the server with "./server". It will print the server IOR to be used by the client.
-- Start the client with "./client <IOR>".
-
-## C++11
-- Obtain and install TAOX11, see http://www.remedy.nl/en/taox11
-- Go into the ./cxx11 subdirectory.
-- Call "brix11 gen build" to generate the GNU makefiles
-- Call "make" to build the client and server
-- Start the server with "./server". It will print the server IOR to be used by the client.
-- Start the client with "./client <IOR>".
-
-## Java
-- Install a recent JDK.
-- Go into the ./java subdirectory.
-- (Optional) Re-generate stubs and skeletons with "idlj -fall ../echo.idl".
-- Call "make" to build the JAR files for client and server.
-- Run the server with "java -jar server.jar".  It will print the server IOR to be used by the client.
-- Run the client with "java -jar client.jar <IOR>".
-
-## Ruby
-- Install R2CORBA, see http://www.remedy.nl/en/r2corba
-- Go into the ./ruby subdirectory.
-- No need to run an IDL compiler
-- Start the server with "ruby server.rb". It will print the server IOR to be used by the client.
-- Start the client with "ruby client.rb <IOR>".
-
-# Compatibility Matrix
-
-The following table shows which combinations of operating system and ORB product were reported to work with the different language implementations.
-
-|                      | openSuSE 13.2  | MacOS X Yosemite  |
-|----------------------|----------------|-------------------|
-| omniORB 4.1.7        |                | Python, C++       |
-| JDK 1.8              |                | Java              |
-| Remedy R2CORBA 1.4.1 | Ruby           |                   |
-| Remedy TAOX11 1.3.2  | C++11          |                   |
-
 ```
 $ cd omniORBpy 4.2.1
 $ mkdir build
@@ -67,3 +25,27 @@ $ make
 $ make install
 $ export PYTHONPATH=$PYTHONPATH:$PREFIX/lib/pythonX.Y/site-packages
 ```
+
+## C++
+- Install omniORB.
+- Go into the ./cxx subdirectory.
+- (Optional) Re-generate stubs and skeletons with "omniorb -bcxx ../echo.idl".
+- Call "make" to build client and server.
+- Start the server with "./server". It will print the server IOR to be used by the client.
+- Start the client with "./client <IOR>".
+```
+$ cd omniORB 4.2.1
+$ mkdir build
+$ cd build
+$ ../configure
+$ make
+$ make install
+```
+
+## Java
+- Install a recent JDK.
+- Go into the ./java subdirectory.
+- (Optional) Re-generate stubs and skeletons with "idlj -fall ../echo.idl".
+- Call "make" to build the JAR files for client and server.
+- Run the server with "java -jar server.jar".  It will print the server IOR to be used by the client.
+- Run the client with "java -jar client.jar <IOR>".
