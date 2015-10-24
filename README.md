@@ -58,3 +58,12 @@ The following table shows which combinations of operating system and ORB product
 | Remedy R2CORBA 1.4.1 | Ruby           |                   |
 | Remedy TAOX11 1.3.2  | C++11          |                   |
 
+```
+$ cd omniORBpy 4.2.1
+$ mkdir build
+$ cd build
+$ ../configure
+$ make
+$ make install
+$ export PYTHONPATH=$PYTHONPATH:$PREFIX/lib/pythonX.Y/site-packages
+```
